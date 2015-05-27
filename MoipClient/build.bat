@@ -1,17 +1,25 @@
-﻿@echo Off
+﻿@echo off
+
+@echo Off
 set config=%1
 if "%config%" == "" (
    set config=Release
 )
-
-set version=
+ 
+set version=1.0.0
 if not "%PackageVersion%" == "" (
-   set version=-Version %PackageVersion%
+   set version=%PackageVersion%
 )
 
-REM Build
-%WINDIR%\Microsoft.NET\Framework\v3.5\msbuild MoipClient.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+set nuget=
+if "%nuget%" == "" (
+	set nuget=nuget
+)
 
-REM Package
+%WINDIR%\Microsoft.NET\Framework\v3.5\msbuild MoipClient\MoipClient.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
+
 mkdir Build
-cmd /c %nuget% pack "Moip\Moip.csproj" -IncludeReferencedProjects -o Build -p Configuration=%config% %version%
+mkdir Build\lib
+mkdir Build\lib\net35
+
+%nuget% pack MoipClient\MoipClient.nuspec" -NoPackageAnalysis -verbosity detailed -o Build -Version %version% -p Configuration="%config%"
