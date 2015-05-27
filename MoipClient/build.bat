@@ -14,4 +14,4 @@ REM Build
 
 REM Package
 mkdir Build
-cmd /c %nuget% pack "MoipClient\Moip.csproj" -IncludeReferencedProjects -o Build -p Configuration=%config% %version%
+cmd /c %nuget% pack "Moip\Moip.csproj" -IncludeReferencedProjects -o Build -p Configuration=%config% %version%
