@@ -1,6 +1,6 @@
 @echo off
 
-@echo Off
+@echo off
 set config=%1
 if "%config%" == "" (
    set config=Release
