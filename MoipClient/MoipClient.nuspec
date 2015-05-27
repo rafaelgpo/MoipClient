@@ -16,6 +16,7 @@
     <tags>sdk ecosystem game directx monogame learning</tags>
   </metadata>
   <files>
+    
     <file src="Moip\bin\$configuration$\Moip.dll" target="lib\net40\" />
   </files>
 </package>
