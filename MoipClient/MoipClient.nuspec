@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MoipClient</id>
+    <version>$version$</version>
+    <title>Moip Client .NET</title>
+    <authors>Netcom SA</authors>
+    <owners>Netcom SA</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Conexão com API Moip</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright &#x00A9; Netcom SA.  All rights reserved.</copyright>
+    <tags>Moip .NET</tags>
+  </metadata>
+  <files>
+	<file src="Moip\bin\$configuration$\Moip.dll" target="lib\net35\" />
+  </files>
+</package>
