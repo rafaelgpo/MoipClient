@@ -6,6 +6,7 @@ using System.Text;
 namespace Moip
 {
 
+
     public class MoipException : Exception
     {
         public string message { get; set; }
