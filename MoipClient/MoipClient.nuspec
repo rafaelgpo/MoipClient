@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MoipClient</id>
+    <version>$version$</version>
+    <title>Moip Client</title>
+    <authors>Netcom</authors>
+    <owners>Netcom</owners>
+    <licenseUrl>http://helpsaude.com</licenseUrl>
+    <projectUrl>http://helpsaude.com</projectUrl>
+    <iconUrl>http://www.youbook.com.br/imagens/banco/imagens/logo_moip[gif].gif</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Terrarium provides a great way for developers to learn about the .NET programming model and language as they develop creatures and introduce them into a peer-to-peer ecosystem.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright Microsoft Corporation.  All rights reserved.</copyright>
+    <tags>sdk ecosystem game directx monogame learning</tags>
+  </metadata>
+  <files>
+    <file src="Moip\bin\$configuration$\Moip.dll" target="lib\net40\" />
+  </files>
+</package>
