@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 
 @echo Off
 set config=%1
