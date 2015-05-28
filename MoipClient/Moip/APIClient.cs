@@ -29,6 +29,11 @@ namespace Moip
             throw new NotImplementedException();
         }
 
+        public void Teste2()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Cria nova assinatura
         /// </summary>
