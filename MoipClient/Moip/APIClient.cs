@@ -24,6 +24,11 @@ namespace Moip
 
         #region methods
 
+        public void Teste()
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Cria nova assinatura
         /// </summary>
