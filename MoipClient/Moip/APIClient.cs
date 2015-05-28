@@ -19,20 +19,10 @@ namespace Moip
         {
             _APIClient = new RestClient { BaseUrl = new Uri(_url) };
             _APIClient.AddDefaultHeader("Authorization", _token);
-
         }
 
         #region methods
 
-        public void Teste()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Teste2()
-        {
-            throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Cria nova assinatura
