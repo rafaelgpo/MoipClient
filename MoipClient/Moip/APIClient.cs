@@ -10,9 +10,6 @@ namespace Moip
 {
     public class APIClient
     {
-        private readonly string _teste;
-        private readonly string _teste2;
-        public readonly string _teste10;
         private readonly RestClient _APIClient;
         private readonly string _url = ConfigurationManager.AppSettings["api_url"];
         private readonly string _token = ConfigurationManager.AppSettings["api_token"];
@@ -21,6 +18,8 @@ namespace Moip
         {
             _APIClient = new RestClient { BaseUrl = new Uri(_url) };
             _APIClient.AddDefaultHeader("Authorization", _token);
+
+
         }
 
         #region methods
