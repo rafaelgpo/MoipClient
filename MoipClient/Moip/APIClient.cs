@@ -18,8 +18,6 @@ namespace Moip
         {
             _APIClient = new RestClient { BaseUrl = new Uri(_url) };
             _APIClient.AddDefaultHeader("Authorization", _token);
-
-
         }
 
         #region methods
@@ -113,22 +111,6 @@ namespace Moip
             return customerSubscriptionList;
         }
 
-        private List<Subscription> ListAllSubscriptions()
-        {
-            string url = String.Format("subscriptions");
-            var request = new RestRequest(url, Method.GET);
-
-            var result = _APIClient.Execute<List<Subscription>>(request);
-
-            if (result.StatusCode == HttpStatusCode.OK)
-                return result.Data;
-            else
-            {
-                var ex = JsonConvert.DeserializeObject<MoipException>(result.Content);
-                throw ex;
-            }
-        }
-
         /// <summary>
         /// Retorna lista de faturas de uma assinatura
         /// </summary>
@@ -140,6 +122,22 @@ namespace Moip
             var request = new RestRequest(url, Method.GET);
 
             var result = _APIClient.Execute<List<Invoice>>(request);
+
+            if (result.StatusCode == HttpStatusCode.OK)
+                return result.Data;
+            else
+            {
+                var ex = JsonConvert.DeserializeObject<MoipException>(result.Content);
+                throw ex;
+            }
+        }
+
+        private List<Subscription> ListAllSubscriptions()
+        {
+            string url = String.Format("subscriptions");
+            var request = new RestRequest(url, Method.GET);
+
+            var result = _APIClient.Execute<List<Subscription>>(request);
 
             if (result.StatusCode == HttpStatusCode.OK)
                 return result.Data;
