@@ -11,6 +11,7 @@ namespace Moip
     public class APIClient
     {
         private readonly string _teste;
+        private readonly string _teste2;
         private readonly RestClient _APIClient;
         private readonly string _url = ConfigurationManager.AppSettings["api_url"];
         private readonly string _token = ConfigurationManager.AppSettings["api_token"];
